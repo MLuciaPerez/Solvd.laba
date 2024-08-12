@@ -1,77 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(  "\nSelection:");
+        // Create objects for Doctor and Billing
+        Doctor doctor = new Doctor("Dr. Smith", 45, "D001", "Cardiology");
+        Billing billing = new Billing(null, 1500.00);
 
-        int[] array = {70, 48, 14, 36, 18, 8, 2};  // Example array, declared and initialized
+        // Create a list of medications
+        List<Medication> medications = new ArrayList<>();
+        medications.add(new Medication("Amoxicillin", "500mg"));
+        medications.add(new Medication("Ibuprofen", "200mg"));
 
-        selection(array);
+        // Instantiate a Patient object with the list of medications
+        Patient patient = new Patient("Juan Gomez", 30, "P001", "Flu", billing, medications);
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.print( array[i] + "  ");  // Prints the now sorted array
+        // Example of method overriding
+        System.out.println(doctor.getName()); // Output: Employee Name: Dr. Smith (Specialization: Cardiology)
+        System.out.println(doctor.getEmployeeId()); // Output: Doctor ID: D001
+
+        // Example of method overloading
+        doctor.prescribeMedication(); // Calls method without parameters
+        doctor.prescribeMedication("Amoxicillin"); // Calls overloaded method with one parameter
+        doctor.prescribeMedication("Amoxicillin", "500mg"); // Calls overloaded method with two parameters
+
+        // Display the patient's medications
+        System.out.println("Medications for " + patient.getName() + ":");
+        for (Medication med : patient.getMedications()) {
+            System.out.println("- " + med.getName() + " " + med.getDosage());
         }
 
-        System.out.println( "\nBubble:" );
-
-        int[] array2 = {70, 48, 14, 36, 18, 8, 2};  // Example array, declared and initialized
-
-        bubble(array2);
-
-        for (int i = 0; i < array2.length; i++) {
-            System.out.print( array2[i] + "  ");  // Prints the now sorted array
-        }
-
-
-    }
-
-    public static void selection(int[] array) {
-
-        // Iterate over each element of the array except the last one
-        for (int i = 0; i < array.length - 1; i++) {
-            int minimumIndex = i;  // Assuming that the first element is the minimum
-
-            // Find the minimum element in the unsorted part of the array
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < array[minimumIndex]) {
-                    minimumIndex = j;  // Updates the index of the minimum element
-                }
-            }
-
-            // Swaps the found minimum element with the first element of the unsorted part
-            int temporary = array[minimumIndex];
-            array[minimumIndex] = array[i];
-            array[i] = temporary;
-        }
-    }
-
-
-    public static void bubble(int[] array) {
-        int m = array.length;
-
-        // Iterates over each element of the array
-        for (int i = 0; i < m - 1; i++) {
-            // Initializes a flag that will help identify if a swap was made in this iteration
-            boolean swapped = false;
-
-            // Iterates over the unsorted elements of the array
-            for (int j = 0; j < m - i - 1; j++) { //The inner loop is responsible for comparing/ swapping the current element with the next element
-                if (array[j] > array[j + 1]) {
-                    // If the current element is greater than the next element, it swaps them
-                    int swapValue = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = swapValue;
-
-                    // Sets the flag to true indicating that a swap was made
-                    swapped = true;
-                }
-            }
-
-            // If no swaps were made, the array is already sorted. We can break out of the loop
-            if (!swapped) {
-                break;
-            }
-        }
+        // Display the patient's bill
+        System.out.println("Patient's Bill: $" + patient.getBilling().getAmount());
     }
 }
