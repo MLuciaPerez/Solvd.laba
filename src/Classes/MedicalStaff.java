@@ -1,4 +1,6 @@
-package Model;
+package Classes;
+
+import Classes.Employee;
 
 abstract class MedicalStaff extends Employee {
     protected String department;

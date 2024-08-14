@@ -1,4 +1,4 @@
-package Model;
+package Classes;
 
 public class Employee extends Person {
     private String employeeId;

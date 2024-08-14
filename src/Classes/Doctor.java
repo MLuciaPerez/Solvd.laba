@@ -1,4 +1,4 @@
-package Model;
+package Classes;
 
 import java.util.Objects;
 
@@ -46,13 +46,13 @@ public class Doctor extends MedicalStaff {
                 Objects.equals(specialization, doctor.specialization);
     }
 
-    // Overriding the getName method from Model.Employee class
+    // Overriding the getName method from Classes.Employee class
     @Override
     public String getName() {
         return  super.getName() + " (Specialization: " + specialization + ")";
     }
 
-    // Overriding the getEmployeeId method from Model.Employee class
+    // Overriding the getEmployeeId method from Classes.Employee class
     @Override
     public String getEmployeeId() {
         return "Doctor ID: " + super.getEmployeeId();

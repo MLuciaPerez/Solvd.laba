@@ -1,7 +1,7 @@
-package Model;
+package Classes;
+
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Clinic {
     // Protected properties

@@ -1,4 +1,6 @@
-package Model;
+package Classes;
+
+import Classes.Employee;
 
 public class Receptionist extends Employee {
     private String deskNumber;

@@ -1,4 +1,4 @@
-package Model;
+package Classes;
 
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public class Medication {
     // Overriding Object methods
     @Override
     public String toString() {
-        return "Model.Medication{Name='" + name + "', Dosage='" + dosage + "'}";
+        return "Classes.Medication{Name='" + name + "', Dosage='" + dosage + "'}";
     }
 
     @Override

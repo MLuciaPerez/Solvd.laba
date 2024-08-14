@@ -1,4 +1,4 @@
-package Model;
+package Classes;
 
 public class Person {
     protected String name; // protected modifier

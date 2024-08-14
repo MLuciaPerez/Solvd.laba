@@ -1,4 +1,4 @@
-package Model;
+package Classes;
 
 public class Appointment {
     private Doctor doctor;

@@ -1,4 +1,6 @@
-package Model;
+package Classes;
+
+import Classes.MedicalStaff;
 
 public class Nurse extends MedicalStaff {
     private String shift;
