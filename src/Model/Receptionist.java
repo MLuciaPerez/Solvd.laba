@@ -1,3 +1,5 @@
+package Model;
+
 public class Receptionist extends Employee {
     private String deskNumber;
 

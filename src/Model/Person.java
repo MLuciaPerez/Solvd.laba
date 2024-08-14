@@ -1,6 +1,8 @@
+package Model;
+
 public class Person {
-    private String name;
-    private int age;
+    protected String name; // protected modifier
+    protected int age; // protected modifier
 
     // Constructor
     public Person(String name, int age) {

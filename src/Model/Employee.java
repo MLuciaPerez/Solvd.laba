@@ -1,3 +1,5 @@
+package Model;
+
 public class Employee extends Person {
     private String employeeId;
 
@@ -19,6 +21,6 @@ public class Employee extends Person {
     // Method Overriding Example
     @Override
     public String getName() {
-        return "Employee Name: " + super.getName();
+        return  super.getName();
     }
 }

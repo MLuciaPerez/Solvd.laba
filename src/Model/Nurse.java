@@ -1,10 +1,17 @@
-public class Nurse extends Employee {
+package Model;
+
+public class Nurse extends MedicalStaff {
     private String shift;
 
     // Constructor
     public Nurse(String name, int age, String employeeId, String shift) {
-        super(name, age, employeeId);
+        super(name, age, employeeId, "Nursing");
         this.shift = shift;
+    }
+
+    @Override
+    public void performDuties() {
+        System.out.println("Nurse " + getName() + " is caring for patients.");
     }
 
     // Getter and Setter

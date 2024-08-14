@@ -1,3 +1,5 @@
+package Model;
+
 public class Billing {
     private Patient patient;
     private double amount;
