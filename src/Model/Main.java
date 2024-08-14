@@ -27,11 +27,11 @@ public class Main {
         billing.setPatient(patient);
 
         // Instantiate Clinic with staff and patients
-        List<MedicalStaff> staff = new ArrayList<>();
+        ArrayList<MedicalStaff> staff = new ArrayList<>();
         staff.add(doctor);
         staff.add(nurse);
 
-        List<Patient> patients = new ArrayList<>();
+        ArrayList<Patient> patients = new ArrayList<>();
         patients.add(patient);
 
         Clinic clinic = new Clinic("Healthy Life Clinic", "123 Wellness Blvd", staff, patients);

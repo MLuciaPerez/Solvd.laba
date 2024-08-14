@@ -1,16 +1,17 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Clinic {
     // Protected properties
     protected String name;
     protected String address;
-    protected List<MedicalStaff> staff;
-    protected List<Patient> patients;
+    protected ArrayList<MedicalStaff> staff;
+    protected ArrayList<Patient> patients;
 
     // Constructor
-    public Clinic(String name, String address, List<MedicalStaff> staff, List<Patient> patients) {
+    public Clinic(String name, String address, ArrayList<MedicalStaff> staff, ArrayList<Patient> patients) {
         this.name = name;
         this.address = address;
         this.staff = staff;
@@ -34,19 +35,19 @@ public class Clinic {
         this.address = address;
     }
 
-    public List<MedicalStaff> getStaff() {
+    public ArrayList<MedicalStaff> getStaff() {
         return staff;
     }
 
-    public void setStaff(List<MedicalStaff> staff) {
+    public void setStaff(ArrayList<MedicalStaff> staff) {
         this.staff = staff;
     }
 
-    public List<Patient> getPatients() {
+    public ArrayList<Patient> getPatients() {
         return patients;
     }
 
-    public void setPatients(List<Patient> patients) {
+    public void setPatients(ArrayList<Patient> patients) {
         this.patients = patients;
     }
 
